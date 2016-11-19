@@ -137,7 +137,7 @@ ul.nav.navbar li a:hover,ul.nav.navbar li a.active,ul.nav.navbar li a:focus{
 }
 /*--//top-nav--*/
 /*--about--*/
-.about,.work,.education,.skills,.portfolio,.contact{
+.about,.work,.education,.achievements,.portfolio,.contact{
 	padding:6em 0;
 }
 h3.title {
@@ -271,8 +271,8 @@ p {
     color: #000;
 }
 /*--//education--*/
-/*--skills--*/
-.skills{
+/*--achievements--*/
+.achievements{
 	background:#000;
 }
 .bar-grids {
@@ -295,7 +295,7 @@ p {
     float: right;
     font-size: 0.9em;
 }
-/*--//skills--*/
+/*--//achievements--*/
 /*--portfolio--*/
 /*--SAP--*/
 ul.resp-tabs-list {
@@ -647,7 +647,7 @@ h2.resp-accordion {
 /*--//slider-up-arrow--*/
 /*---- responsive-design -----*/
 @media(max-width:1366px){
-.about,.work,.education,.skills,.portfolio,.contact {
+.about,.work,.education,.achievements,.portfolio,.contact {
     padding: 5em 0;
 }
 .work-right.work-right2 {
@@ -667,7 +667,7 @@ ul.address {
 ul.address li ul.address-text li {
     margin-top: 0.8em;
 }
-.about, .work, .education, .skills, .portfolio, .contact {
+.about, .work, .education, .achievements, .portfolio, .contact {
     padding: 4em 0;
 }
 h3.title {
@@ -799,7 +799,7 @@ h3.title {
 }
 }
 @media(max-width:800px){
-.about, .work, .education, .skills, .portfolio, .contact {
+.about, .work, .education, .achievements, .portfolio, .contact {
     padding: 3em 0;
 }
 h3.title {
@@ -853,7 +853,7 @@ ul.address {
 .banner-info {
     padding: 2em 0;
 }
-.about, .work, .education, .skills, .portfolio, .contact {
+.about, .work, .education, .achievements, .portfolio, .contact {
     padding: 2em 0;
 }
 h3.title {
@@ -1072,7 +1072,7 @@ ul.nav.navbar li a {
     padding: 0.6em 1.5em;
     font-size: 1em;
 }
-.about, .work, .education, .skills, .portfolio, .contact {
+.about, .work, .education, .achievements, .portfolio, .contact {
     padding: 1em 0;
 }
 h3.title {

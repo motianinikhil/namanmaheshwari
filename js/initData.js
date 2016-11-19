@@ -88,14 +88,6 @@ var DATA = {
     }
   ],
   "PORTFOLIO": {
-    "PROJECTS": [{
-      "title": "A Design Approach for Compressor Based Approximate Multipliers",
-      "pdfSource": "./docs/VLSID-2015.pdf",
-      "author": "<strong>Naman Maheshwari</strong>, Zhixi Yang, Jie Han and Fabrizio Lombardi",
-      "popup": "Awarded the <strong>Student Fellowship</strong> by the VLSID-2015 Conference Committee, for excellent record in academics & past work",
-      "footer": "Proceedings of 28th International Conference on VLSI Design, 2015"
-    },],
-    "PATENTS": [],
     "PUBLICATIONS": [
       {
         "title": "A Design Approach for Compressor Based Approximate Multipliers",
@@ -129,7 +121,66 @@ var DATA = {
         "footer": "(In Process) Submitted to 35th IEEE VLSI Test Symposium (VTS-2017)",
         "tip": "Paper not avaiable for viewing..."
       }
-    ]
+    ],
+    "PROJECTS": [
+      {
+        "title": "Implementation of 16x16 Compressor Based Approximate Multipliers",
+        "duration": "Aug 2014 - Dec 2014",
+        "message": [
+          "Proposed and implemented compressor based 16x16 approximate multipliers using the technique of recursive multiplication in VHDL and MATLAB and compared them on the basis of accuracy and circuit metrics (power, area and delay)",
+          "Proposed designs achieve approximately 50% reduction in power and 20% reduction in circuit area over the accurate compressor based design"
+        ],
+        "footer": "<strong>Guide:</strong> Dr. S. Gurunarayanan, Professor, Dept. of Electrical & Electronics Engg and Dean, Admissions and Work Integrated Learning Programmes (WILP), BITS-Pilani"
+      },
+
+      {
+        "title": "Building a Virtual Lab",
+        "duration": "Aug 2014 - Dec 2014",
+        "message": [
+          "•Built a Virtual Lab on open source software like Electric VLSI and Scilab for WILP students of BITS-Pilani"
+        ],
+        "footer": "<strong>Guide:</strong> Dr. S. Gurunarayanan, Professor, Dept. of Electrical & Electronics Engg and Dean, Admissions and Work Integrated Learning Programmes (WILP), BITS-Pilani"
+      },
+
+      {
+        "title": "Operational Amplifier Design",
+        "duration": "Aug 2013 - Dec 2013",
+        "message": [
+          "Designed & simulated a two stage folded cascode op-amp and met challenging specifications of gain, bandwidth and phase margin on Cadence Virtuoso ADE and Spectre Circuit Simulator"
+        ],
+        "footer": "<strong>Guide:</strong> Dr. Anu Gupta, Associate Professor, Head of Dept. of Electrical & Electronics Engg, BITS-Pilani"
+      },
+
+      {
+        "title": "3-input AND/NAND Gate Design",
+        "duration": "Aug 2013 – Dec 2013",
+        "message": [
+          "Designed a 3-input AND/NAND gate using pass transistor logic to achieve desired functionality",
+          "Prepared its layout on Cadence Virtuoso Layout Suite, thus gaining an experience on how the circuits are fabricated"
+        ],
+        "footer": "<strong>Guide:</strong> Dr. Anu Gupta, Associate Professor, Head of Dept. of Electrical & Electronics Engg, BITS-Pilani"
+      },
+
+      {
+        "title": "Signal Processing Techniques for Structural Health Monitoring (SHM)",
+        "duration": "Aug 2013 – Dec 2013",
+        "message": [
+          "Studied various stages of SHM and different signal processing techniques used at every stage",
+          "Implemented Discrete Wavelet Transform used for SHM in MATLAB and VHDL"
+        ],
+        "footer": "<strong>Guide:</strong> Dr. Kota Solomon Raju, Scientist, Digital Systems Group, Central Electronics Engineering Research Institute (CEERI)-Pilani"
+      },
+
+      {
+        "title": "Biometric Analysis using Iris Recognition",
+        "duration": "Jan 2013 – May 2013",
+        "message": [
+          "Implemented an Iris Recognition algorithm, employing pattern recognition algorithms using image processing toolbox in MATLAB and built an automated code for reading images from the MMU database for image matching"
+        ],
+        "footer": "<strong>Guide:</strong> Dr. Abhijit R Asati, Assistant Professor, Dept. of Electrical & Electronics Engg, BITS-Pilani"
+      }
+    ],
+    "PATENTS": []
   }
 };
 
@@ -137,25 +188,38 @@ function portfolio (obj, container) {
   var head = '<div id="horizontalTab" style="display: block; width: 100%; margin: 0px;"><ul class="resp-tabs-list wow fadeInUp animated" data-wow-delay=".7s">';
   var body = '<div class="resp-tabs-container">';
 
-  function readPubs (currentTab) {
+  function readPubs (currentTab, isProject) {
     var content = '<ol class = "tab_img ">';
     for (var e = 0; e < currentTab.length; e++) {
-      var str = '<li><blockquote> ';
+      var str = '<li><blockquote ';
       var element = currentTab[e];
-      str += element.author + ', <em><a ';
-      if (element.pdfSource) {
-        str += 'class="view-pdf" data-title="' + element.title + '" href="' + element.pdfSource + '" ';
+      if (isProject) {
+        str += ' data-toggle="collapse" data-target="#project' + e + '" >';
+        str += element.title + '<span class="pull-right">' + element.duration + '</span>';
+        if (element.footer) {
+          str += '<footer>' + element.footer + '</footer>';
+        }
+        str += "</blockquote>";
+        str +=
+          '<div id="project' + e + '" class="collapse">' + '<ul><li>' + element.message.join("</li><li>") + '</li></ul>' +
+          '</div>';
       } else {
-        element.popup = element.popup || "";
-        var ptitle = element.popup.title || "";
-        var pContent = element.popup.content || element.popup || "Not Available for Viewing..." + "";
-        str += 'data-toggle="popover" data-content="' + pContent + '" title="' + ptitle + '"  data-placement="bottom" '
+        str += '>' + element.author + ', <em><a ';
+        if (element.pdfSource) {
+          str += 'class="view-pdf" data-title="' + element.title + '" href="' + element.pdfSource + '" ';
+        } else {
+          element.popup = element.popup || "";
+          var ptitle = element.popup.title || "";
+          var pContent = element.popup.content || element.popup || "Not Available for Viewing..." + "";
+          str += 'data-toggle="popover" data-content="' + pContent + '" title="' + ptitle + '"  data-placement="bottom" '
+        }
+        str += ' >' + element.title + '</a></em>';
+        if (element.footer) {
+          str += '<footer>' + element.footer + '</footer>';
+        }
+        str += "</blockquote>";
       }
-      str += ' >' + element.title + '</a></em>';
-      if (element.footer) {
-        str += '<footer>' + element.footer + '</footer>';
-      }
-      str += "</blockquote></li>";
+      str += "</li>";
       content += str;
     }
     content += '</ol>';
@@ -166,8 +230,8 @@ function portfolio (obj, container) {
     if (obj.hasOwnProperty(tab)) {
       head += '<li class="resp-tab-item"><span>' + tab + '</span></li>';
       body += '<div class="tab-1 resp-tab-content"><div class="tab_img">';
-      if (tab === "PUBLICATIONS" || tab === "PROJECTS") {
-        body += readPubs(obj[tab]);
+      if (tab === "PUBLICATIONS" || tab == "PROJECTS") {
+        body += readPubs(obj[tab], tab === "PROJECTS");
       }
       body += '</div></div>';
     }
