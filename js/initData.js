@@ -74,17 +74,8 @@ var DATA = {
       "duration": "B.E. (Hons.) 2011-2015",
       "shortTitle": "Electrical & Electronics Engg, BITS PILANI",
       "shortDesc": [
-        "In my second semester in the senior year at BITS-Pilani, I interned at Texas Instruments, Bangalore, India in the Automotive Radar Design-for-Testability team.."
-      ],
-      "additionalInfo": {
-        "dataRef": "texasIntern",
-        "linkText": "Read More ...",
-        "data": {
-          "title": "Digital Design Intern, Texas Instruments(Jan '15 – Jun '15)",
-          "message": "<p>In my second semester in the senior year at BITS-Pilani, I interned at Texas Instruments, Bangalore, India in the Automotive Radar Design-for-Testability team.</p>" +
-                     "<p>As part of the internship, I worked on designing a Context Save and Restore Mechanism to preserve the values of critical functional registers during field testing by the Self-Test Controller. I designed a robust state machine which saves their values in a RAM during test and restores them after test-completion, overcoming the challenge of asynchronous functioning of RAMs. Alongside this, I worked on the Automatic Test Pattern Generation (ATPG) for critical IPs under the scope of self-test for automotive safety. I implemented a novel technique of Low-Power Scan (LP-Scan) invented by my team, which led to 43% reduction in scan-shift power. The LP-Scan architecture required modification of the ATPG tool-generated patterns and the major challenge was to calculate its fault-free Multiple Input Signature Register (MISR) signature. I created an automated infrastructure to generate fault-free MISR signatures for custom patterns and further developed it to support the generation of ROM-Images containing patterns and MISR signatures for self-test critical IPs. To address the debug and diagnosis limitations of the MISR-based scan-compression patterns, the flow was enhanced to support the per-cycle and per-pattern MISR signature generation. This flow resulted in debug-time savings of millions of cycles. </p><p>This internship provided me with invaluable practical experience in cutting-edge technology, where I was able to solve a potential high-impact problem, saving significant test-cost for TI.</p><p> I presented this work in TIITC-2016</p>"
-        }
-      }
+        "<strong> CGPA - 9.31/10.0</strong><p>Birla Institute of Technology and Science (BITS)-Pilani, Pilani Campus, India <ul><li>Among the top 10 students in Electrical, Electronics & Instrumentation Departments in a batch of 150 students </li><li> Overall amongst top 5% students in BITS-Pilani</li></ul></p>"
+      ]
     }
   ],
   "PORTFOLIO": {
@@ -180,7 +171,21 @@ var DATA = {
         "footer": "<strong>Guide:</strong> Dr. Abhijit R Asati, Assistant Professor, Dept. of Electrical & Electronics Engg, BITS-Pilani"
       }
     ],
-    "PATENTS": []
+    "PATENTS": [
+      {
+        "title": "Novel Method and Apparatus for Per Cycle and Per Pattern MISR Debug and Diagnosis",
+        "duration": "Aug 2014 - Dec 2014",
+        "message": [
+          "Invented a JTAG-based Hybrid MISR Implementation to solve the problem of debug in case of failing MISR-based scan compression patterns",
+          "Various key features of the invention are<ul>" +
+          "<li>Enables per pattern and per cycle signature observation without test-time and test-volume impact</li>" +
+          "<li>Existing Test Data Out (TDO) pin is used for MISR-Observe, avoiding the need for exclusive test-pin</li>" +
+          "<li>Does not require additional long-chain diagnostic test-mode and enables continue-on-fail in the event of failures</li>" +
+          "</ul>"
+        ],
+        "footer": "<strong>Approved</strong> for filing at USPTO from Texas Instruments "
+      }
+    ]
   }
 };
 
@@ -190,19 +195,23 @@ function portfolio (obj, container) {
 
   function readPubs (currentTab, isProject) {
     var content = '<ol class = "tab_img ">';
+    var firstDone = false;
     for (var e = 0; e < currentTab.length; e++) {
       var str = '<li><blockquote ';
       var element = currentTab[e];
       if (isProject) {
         str += ' data-toggle="collapse" data-target="#project' + e + '" >';
         str += element.title + '<span class="pull-right">' + element.duration + '</span>';
-        if (element.footer) {
-          str += '<footer>' + element.footer + '</footer>';
+        element.footer = element.footer || "";
+        str += '<footer>' + element.footer + '<div id="project' + e + '" class="collapse';
+        if (!firstDone) {
+          firstDone = true;
+          str += ' in';
         }
-        str += "</blockquote>";
-        str +=
-          '<div id="project' + e + '" class="collapse">' + '<ul><li>' + element.message.join("</li><li>") + '</li></ul>' +
-          '</div>';
+        str += '">' + '<ul><li>' +
+               element.message.join("</li><li>") + '</li></ul>' +
+               '</div><br/>' + '</footer>';
+        str += "</a></blockquote>";
       } else {
         str += '>' + element.author + ', <em><a ';
         if (element.pdfSource) {
@@ -230,9 +239,7 @@ function portfolio (obj, container) {
     if (obj.hasOwnProperty(tab)) {
       head += '<li class="resp-tab-item"><span>' + tab + '</span></li>';
       body += '<div class="tab-1 resp-tab-content"><div class="tab_img">';
-      if (tab === "PUBLICATIONS" || tab == "PROJECTS") {
-        body += readPubs(obj[tab], tab === "PROJECTS");
-      }
+      body += readPubs(obj[tab], tab !== "PUBLICATIONS");
       body += '</div></div>';
     }
   }
@@ -312,3 +319,34 @@ function leftRight (obj, container, icon) {
 }
 leftRight(DATA.WORK, "#work-container", "glyphicon-briefcase");
 leftRight(DATA.EDUCATION, "#education-container", "glyphicon-education");
+$(document).ready(function () {
+  $('#submitContact').click(function (e) {
+    e.preventDefault();
+    $.ajax({
+      type: 'POST',
+      url: "http://formspree.io/naman.mah1993@gmail.com",
+      data: $('#contactForm').serialize(),
+      success: function () {
+        var successMsg = '<div id="alert-msg"  class="alert alert-success alert-dismissible fade in">' +
+                         '<button type="button" class="close" data-dismiss="alert">&times;</button>' +
+                         'Message Sent Successfully' +
+                         '</div>';
+        $("#alert-msg").fadeTo(2000, 500).slideUp(500, function () {
+          $("#alert-msg").slideUp(500);
+        });
+
+        $('#alert').append(successMsg);
+      },
+      error: function () {
+        var failMsg = '<div id="alert-msg" class="alert alert-error alert-dismissible fade in">' +
+                      '<a href="#" class="close" data-dismiss="alert">&times;</a>' +
+                      '<strong> Error </strong>There was an error sending message. Please contact directly' +
+                      '</div>';
+        $('#alert').append(failMsg);
+      }
+    })
+  })
+});
+$(".alert-dismissable").fadeTo(2000, 500).slideUp(500, function () {
+  $(".alert-dismissable").alert('close');
+});
