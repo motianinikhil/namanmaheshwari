@@ -1337,9 +1337,6 @@ h2.resp-accordion {
   top: 5px;
 }
 
-.modal-body {
-  margin: 4px;
-}
 
 .achievements-info blockquote {
   color: #008B8B
@@ -1371,4 +1368,15 @@ h2.resp-accordion {
 }
 #alert-msg {
   margin: 0 auto;
+}
+.modal-content .modal-body {
+  margin: 4px;
+  padding-top: 2px;
+}
+
+.modal ul li {
+  padding-left: 5px;
+}
+.lowspace {
+  padding-left: 10px;
 }
