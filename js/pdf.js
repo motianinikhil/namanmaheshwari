@@ -33,7 +33,8 @@ $(function () {
   $('.view-pdf').on('click', function () {
     var pdf_link = $(this).attr('href');
     var title = $(this).attr('data-title') || "My PDF";
-    var iframe = '<object type="application/pdf" data="' + pdf_link + '" width="100%" height="500">No Support</object>'
+    var iframe = '<object type="application/pdf" data="' + pdf_link + '" width="100%" height="500">No Support. <a href="' +
+                 pdf_link + '" >Either use a different device or Click here to Download</a></object>'
     $.createModal({
       title: title,
       message: iframe,

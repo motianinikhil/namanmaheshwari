@@ -704,7 +704,7 @@ h2.resp-accordion {
   padding: 2em 0;
   text-align: center;
   background: #1F1F1F;
-  font-size:0.75em;
+  font-size: 0.75em;
 }
 
 .footer p {
@@ -1337,9 +1337,12 @@ h2.resp-accordion {
   top: 5px;
 }
 
-
 .achievements-info blockquote {
   color: #008B8B
+}
+
+blockquote > ul {
+  list-style-type: disc;
 }
 
 .achievements-info {
@@ -1349,11 +1352,11 @@ h2.resp-accordion {
 .achievements-info li:before {
   content: "\e034";
   font-family: 'Glyphicons Halflings';
-  font-size: 1.5em;
+  font-size: 1em;
   position: relative;
   margin-right: 10px;
   top: 3px;
-  color: #CCC;
+  color: #008B8B;
 }
 
 [data-toggle="collapse"] {
@@ -1366,9 +1369,11 @@ h2.resp-accordion {
   left: 0;
   width: 100%;
 }
+
 #alert-msg {
   margin: 0 auto;
 }
+
 .modal-content .modal-body {
   margin: 4px;
   padding-top: 2px;
@@ -1377,6 +1382,12 @@ h2.resp-accordion {
 .modal ul li {
   padding-left: 5px;
 }
+
 .lowspace {
   padding-left: 10px;
+}
+
+.achievements-h3 {
+  color: #008B8B
+
 }

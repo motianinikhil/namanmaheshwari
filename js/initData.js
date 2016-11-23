@@ -67,7 +67,7 @@ var DATA = {
         "During my undergraduate studies at BITS-Pilani, I was selected as the Professional/Teaching Assistant for four courses."
       ],
       "additionalInfo": {
-        "dataRef": "mitacsIntern",
+        "dataRef": "collegeTA",
         "linkText": "Read More ...",
         "data": {
           "title": "BITS-Pilani, Pilani Campus, India (Aug 2013 - Dec 2014)",
@@ -94,7 +94,7 @@ var DATA = {
       {
         "title": "Implementation of 16x16 Compressor Based Approximate Multipliers",
         "duration": "Aug 2014 - Dec 2014",
-        "report": "./docs/CV_Naman_Maheshwari.pdf",
+        "report": "./docs/16x16MulDesign.pdf",
         "message": [
           "Proposed and implemented compressor based 16x16 approximate multipliers using the technique of recursive multiplication in VHDL and MATLAB and compared them on the basis of accuracy and circuit metrics (power, area and delay)",
           "Proposed designs achieve approximately 50% reduction in power and 20% reduction in circuit area over the accurate compressor based design"
@@ -104,10 +104,9 @@ var DATA = {
 
       {
         "title": "Building a Virtual Lab",
-        "duration": "Aug 2014 - Dec 2014",
-        "report": "./docs/VirtualLabReport.pdf",
+        "duration": "Aug 2014 - Dec 2014<br /><a href='./docs/VirtualLab.zip' class='pull-right'>Project Report</a>",
         "message": [
-          "•Built a Virtual Lab on open source software like Electric VLSI and Scilab for WILP students of BITS-Pilani"
+          "Built a Virtual Lab on open source software like Electric VLSI and Scilab for WILP students of BITS-Pilani"
         ],
         "footer": "<strong>Guide:</strong> <a href='http://bits-pilani.ac.in/pilani/sguru/profile'>Dr. S. Gurunarayanan</a>, Professor, Dept. of Electrical & Electronics Engg and Dean, Admissions and Work Integrated Learning Programmes (WILP), BITS-Pilani"
       },
@@ -115,7 +114,7 @@ var DATA = {
       {
         "title": "Operational Amplifier Design",
         "duration": "Aug 2013 - Dec 2013",
-        "report": "./docs/OpAmpReport.pdf",
+        "report": "./docs/OpAmpDesign.pdf",
         "message": [
           "Designed & simulated a two stage folded cascode op-amp and met challenging specifications of gain, bandwidth and phase margin on Cadence Virtuoso ADE and Spectre Circuit Simulator"
         ],
@@ -125,6 +124,7 @@ var DATA = {
       {
         "title": "3-input AND/NAND Gate Design",
         "duration": "Aug 2013 - Dec 2013",
+        "report": "./docs/AndGateDesign.pdf",
         "message": [
           "Designed a 3-input AND/NAND gate using pass transistor logic to achieve desired functionality",
           "Prepared its layout on Cadence Virtuoso Layout Suite, thus gaining an experience on how the circuits are fabricated"
@@ -135,6 +135,7 @@ var DATA = {
       {
         "title": "Signal Processing Techniques for Structural Health Monitoring (SHM)",
         "duration": "Aug 2013 - Dec 2013",
+        "report": "./docs/SHM.pdf",
         "message": [
           "Studied various stages of SHM and different signal processing techniques used at every stage",
           "Implemented Discrete Wavelet Transform used for SHM in MATLAB and VHDL"
@@ -145,6 +146,7 @@ var DATA = {
       {
         "title": "Biometric Analysis using Iris Recognition",
         "duration": "Jan 2013 - May 2013",
+        "report": "./docs/IrisRecognition.pdf",
         "message": [
           "Implemented an Iris Recognition algorithm, employing pattern recognition algorithms using image processing toolbox in MATLAB and built an automated code for reading images from the MMU database for image matching"
         ],
@@ -158,13 +160,13 @@ var DATA = {
         "author": "<strong>Naman Maheshwari</strong>, Zhixi Yang, Jie Han and Fabrizio Lombardi",
         "popup": "",
         "footer": "Proceedings of 28th International Conference on VLSI Design, 2015 (<strong>VLSID-2015</strong>)" +
-                  "<br />Awarded the <strong>Student Fellowship</strong> by the VLSID-2015 Conference Committee, for excellent record in academics & past work"
+                  "<br /><span class='glyphicon glyphicon-ok-circle'></span>  Awarded the <strong>Student Fellowship</strong> by the VLSID-2015 Conference Committee, for excellent record in academics & past work"
       },
       {
         "title": "Enhanced MISR Debug and Diagnosis with Per Cycle Scan Data Observation Capability",
         "author": "<strong>Naman Maheshwari</strong>, Wilson Pradeep, Prakash Narayanan and Rajesh Mittal",
         "footer": "Proceedings of 19th Texas Instruments India Technical Conference, 2016 (<strong>TIITC-2016</strong>) [Acceptance Rate: 24%]",
-        "tip": "Paper Not Available for viewing, viz. Copyrights..."
+        "tip": "Paper Not Available for viewing because the data is TI-Confidential."
       },
       {
         "title": "A Comparative Evaluation of Approximate Multipliers",
@@ -172,13 +174,13 @@ var DATA = {
         "author": "Honglan Jiang, Cong Liu, <strong>Naman Maheshwari</strong>, Fabrizio Lombardi and Jie Han",
         "popup": "",
         "footer": "Proceedings of 12th ACM/IEEE International Symposium on Nanoscale Architectures, 2016 (<strong>NANOARCH-2016</strong>)" +
-                  "<br />Nominated for the <strong>Best Paper Award</strong> in the conference proceedings"
+                  "<br /><span class='glyphicon glyphicon-ok-circle'></span>  Nominated for the <strong>Best Paper Award</strong> in the conference proceedings"
       },
       {
         "title": "Novel Debug and Diagnosis Method for MISR based Scan Compression Architecture",
         "author": "<strong>Naman Maheshwari</strong>, Wilson Pradeep and Prakash Narayanan",
         "footer": "<em>Submitted </em> to 35th IEEE VLSI Test Symposium, 2017 (VTS-2017)",
-        "tip": "Paper Not Available for viewing, viz. Copyrights..."
+        "tip": "Paper in review."
       },
       {
         "title": "A Comparison of Approximate Multipliers for Error Resilient Applications",
@@ -194,7 +196,7 @@ var DATA = {
         "duration": "Aug 2014 - Dec 2014",
         "message": [
           "Invented a JTAG-based Hybrid MISR Implementation to solve the problem of debug in case of failing MISR-based scan compression patterns",
-          "Various key features of the invention are<ul>" +
+          "Various key features of the invention are<ul class='lowspace'>" +
           "<li>Enables per pattern and per cycle signature observation without test-time and test-volume impact</li>" +
           "<li>Existing Test Data Out (TDO) pin is used for MISR-Observe, avoiding the need for exclusive test-pin</li>" +
           "<li>Does not require additional long-chain diagnostic test-mode and enables continue-on-fail in the event of failures</li>" +
@@ -205,6 +207,7 @@ var DATA = {
     ]
   }
 };
+
 
 function portfolio (obj, container) {
   var head = '<div id="horizontalTab" style="display: block; width: 100%; margin: 0px;"><ul class="resp-tabs-list wow fadeInUp animated" data-wow-delay=".7s">';
@@ -241,7 +244,7 @@ function portfolio (obj, container) {
           element.popup = element.popup || "";
           var ptitle = element.popup.title || "";
           var pContent = element.popup.content || element.popup || element.tip || "Not Available for Viewing..." + "";
-          str += 'data-toggle="popover" data-content="' + pContent + '" title="' + ptitle + '"  data-placement="bottom" '
+          str += 'data-toggle="popover" data-content="' + pContent + '" title="' + ptitle + '"  data-placement="bottom"'
         }
         str += ' >' + element.title + '</a></em>';
         if (element.footer) {
@@ -312,7 +315,7 @@ function leftRight (obj, container, icon) {
         '<a class=" view-exp" data-ref="' + element.additionalInfo.dataRef + '">' + element.additionalInfo.linkText + '</a>';
       if (!element.additionalInfo.data.message) {
         element.additionalInfo.data.message =
-          "<strong>" + element.additionalInfo.data.messageHead + "</strong><br /><ul class='lowspace'><li>" +
+          "<strong>" + element.additionalInfo.data.messageHead + "</strong><br /><br /><ul class='lowspace'><li>" +
           element.additionalInfo.data.messageList.join("</li><li>") + "</li></ul>";
       }
       window.workMap = window.workMap || {};
