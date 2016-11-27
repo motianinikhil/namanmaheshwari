@@ -4,6 +4,7 @@ body {
   background: #FFF;
 }
 
+
 body a {
   transition: 0.5s all;
   -webkit-transition: 0.5s all;
@@ -1338,15 +1339,17 @@ h2.resp-accordion {
 }
 
 .achievements-info blockquote {
-  color: #008B8B
+  color: #F7E612
 }
 
 blockquote > ul {
   list-style-type: disc;
+  text-indent:-1em;
+
 }
 
 .achievements-info {
-  color: #FFF;
+  color: #999;
 }
 
 .achievements-info li:before {
@@ -1356,7 +1359,6 @@ blockquote > ul {
   position: relative;
   margin-right: 10px;
   top: 3px;
-  color: #008B8B;
 }
 
 [data-toggle="collapse"] {
@@ -1388,6 +1390,22 @@ blockquote > ul {
 }
 
 .achievements-h3 {
-  color: #008B8B
+  color: #F7E612
 
+}
+
+
+li.arrow:before {
+  content: "\e080";
+  font-family: 'Glyphicons Halflings';
+  font-size: .6em;
+
+}
+ul.arrow {
+  text-indent: -1em;
+}
+@media (min-width: 1200px) {
+  .pull-right-lg {
+    float: right;
+  }
 }
