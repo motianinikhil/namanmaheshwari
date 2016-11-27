@@ -32,9 +32,9 @@ function portfolio (obj, container) {
           str += 'class="view-pdf" data-title="' + element.title + '" href="' + element.pdfSource + '" ';
         } else {
           element.popup = element.popup || "";
-          var ptitle = element.popup.title || "";
+          var ptitle = element.popup.title || element.popup || element.tip || "Not Available for Viewing..." + "";
           var pContent = element.popup.content || element.popup || element.tip || "Not Available for Viewing..." + "";
-          str += 'data-toggle="popover" data-content="' + pContent + '" title="' + ptitle + '"  data-placement="bottom"'
+          str += 'data-toggle="tooltip" data-content="' + pContent + '" title="' + ptitle + '"  data-placement="bottom"'
         }
         str += ' >' + element.title + '</a></em>';
         if (element.footer) {
