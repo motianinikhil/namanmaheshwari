@@ -1,6 +1,6 @@
 (function (a) {
   a.createModal = function (b) {
-    defaults = {title: "", message: "Additional Information!", closeButton: true, scrollable: false};
+    defaults = {title: "", message: "Your Message Goes Here!", closeButton: true, scrollable: false};
     var b = a.extend({}, defaults, b);
     var c = (b.scrollable === true) ? 'style="max-height: 420px;overflow-y: auto;"' : "";
     html = '<div class="modal fade" id="myModal">';
@@ -12,7 +12,7 @@
       html += '<h4 class="modal-title">' + b.title + "</h4>"
     }
     html += "</div>";
-    html += '<div class="modal-body text-justify" ' + c + ">";
+    html += '<div class="modal-body" ' + c + ">";
     html += b.message;
     html += "</div>";
     html += '<div class="modal-footer">';
@@ -29,3 +29,18 @@
     })
   }
 })(jQuery);
+$(function () {
+  $('.view-pdf').on('click', function () {
+    var pdf_link = $(this).attr('href');
+    var title = $(this).attr('data-title') || "My PDF";
+    var iframe = '<object type="application/pdf" data="' + pdf_link + '" width="100%" height="500">No Support. <a href="' +
+                 pdf_link + '" >Either use a different device or Click here to Download</a></object>'
+    $.createModal({
+      title: title,
+      message: iframe,
+      closeButton: true,
+      scrollable: false
+    });
+    return false;
+  });
+})

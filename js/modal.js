@@ -1,22 +1,3 @@
-/*
- window.workMap = {
- "texasFull": {
- "title": "Texas Instruments (Jul '15 - Present)",
- "message": "<strong>DFT Engineer</strong>" +
- "<p>I am currently working as a Digital Design Engineer in the Automotive Radar Design-for-Testability team at Texas Instruments, Bangalore, India.</p>" +
- "<p>  After joining the team full-time, I have worked on the implementation of Built-In Self-Test (BIST) mechanism for memories for the memory-intensive design with 250+memories. To cater to stringent automotive-safety standards, I architected memory-BIST for both production and field testing. To optimize test-time, I implemented concurrent testing of memories, saving approximately 50% on memory test-time. I also optimized memory data-path based on physical design feedback, and verified multiple fault-detection algorithms across all process corners to qualify the BIST-architecture. To further enhance the diagnostics in MISR-based scan-compression, we invented a novel JTAG-based Hybrid MISR architecture. It includes additional hardware to enable features such as continue-on-fail and on-the-fly failure detection for test-time optimization, which are not supported in the existing architectures. Also, it avoids the need of exclusive MISR-Observe test-pin and mitigates the need of additional long-chain diagnostic mode. This has been approved to be filed at USPTO and Provisional Specification has been filed. We consolidated our work on MISR-based scan-compression diagnostics and submitted it as a full-paper in VTS-2017. Currently, I am involved in ATPG for advanced fault-models like Small Delay Defect (SDD) and Path-Delay, working on improving the test-quality and optimizing the final production set pattern-count.</p>"
- },
- "texasIntern": {
- "title": "",
- "message": "<p>In my second semester in the senior year at BITS-Pilani, I interned at Texas Instruments, Bangalore, India in the Automotive Radar Design-for-Testability team.</p>" +
- "<p>As part of the internship, I worked on designing a Context Save and Restore Mechanism to preserve the values of critical functional registers during field testing by the Self-Test Controller. I designed a robust state machine which saves their values in a RAM during test and restores them after test-completion, overcoming the challenge of asynchronous functioning of RAMs. Alongside this, I worked on the Automatic Test Pattern Generation (ATPG) for critical IPs under the scope of self-test for automotive safety. I implemented a novel technique of Low-Power Scan (LP-Scan) invented by my team, which led to 43% reduction in scan-shift power. The LP-Scan architecture required modification of the ATPG tool-generated patterns and the major challenge was to calculate its fault-free Multiple Input Signature Register (MISR) signature. I created an automated infrastructure to generate fault-free MISR signatures for custom patterns and further developed it to support the generation of ROM-Images containing patterns and MISR signatures for self-test critical IPs. To address the debug and diagnosis limitations of the MISR-based scan-compression patterns, the flow was enhanced to support the per-cycle and per-pattern MISR signature generation. This flow resulted in debug-time savings of millions of cycles. </p><p>This internship provided me with invaluable practical experience in cutting-edge technology, where I was able to solve a potential high-impact problem, saving significant test-cost for TI.</p><p> I presented this work in TIITC-2016</p>"
- },
- "mitacsIntern": {
- "title": "Visiting Research Scholar, University of Alberta, Edmonton, Canada(May '14 to Jul '14)",
- "message": "Visiting Research Scholar, Department of Electrical and Computer Engineering, University of Alberta, Edmonton, Canada"
- }
- };
- */
 (function (a) {
   a.createModal = function (b) {
     defaults = {title: "", message: "Additional Information!", closeButton: true, scrollable: false};
@@ -49,6 +30,31 @@
   }
 })(jQuery);
 $(function () {
+  var isMobile = false; //initiate as false
+  // device detection
+  if (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|ipad|iris|kindle|Android|Silk|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(
+      navigator.userAgent)
+      ||
+      /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(
+        navigator.userAgent.substr(0, 4))) {
+    isMobile = true;
+  }
+  if (!isMobile) {
+
+    $('.view-pdf').on('click', function () {
+      var pdf_link = $(this).attr('href');
+      var title = $(this).attr('data-title') || "My PDF";
+      var iframe = '<object type="application/pdf" data="' + pdf_link + '" width="100%" height="500">No Support. <a href="' +
+                   pdf_link + '" >Either use a different device or Click here to Download</a></object>'
+      $.createModal({
+        title: title,
+        message: iframe,
+        closeButton: true,
+        scrollable: false
+      });
+      return false;
+    });
+  }
   $('.view-exp').on('click', function () {
     var ref = $(this).attr('data-ref') || "texasFull";
     if (window.workMap && window.workMap.hasOwnProperty(ref)) {
