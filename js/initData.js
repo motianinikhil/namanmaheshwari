@@ -192,8 +192,9 @@ var DATA = {
     "PATENT": [
       {
         "title": "Novel Method and Apparatus for Per Cycle and Per Pattern MISR Debug and Diagnosis",
-        "duration": "Aug 2014 - Dec 2014",
-        "message": [
+        "author": "<strong>Naman Maheshwari</strong>, Wilson Pradeep and Prakash Narayanan",
+        "tip": "Filing in progress.",
+        "messageList": [
           "Invented a JTAG-based Hybrid MISR Implementation to solve the problem of debug in case of failing MISR-based scan compression patterns",
           "Various key features of the invention are<ul class='lowspace'>" +
           "<li type='circle'>Enables per pattern and per cycle signature observation without test-time and test-volume impact</li>" +
@@ -201,7 +202,7 @@ var DATA = {
           "<li type='circle'>Does not require additional long-chain diagnostic test-mode and enables continue-on-fail in the event of failures</li>" +
           "</ul>"
         ],
-        "footer": "<strong>Approved</strong> for filing at USPTO from Texas Instruments "
+        "footer": "<strong>Approved</strong> for filing at USPTO from Texas Instruments"
       }
     ]
   }

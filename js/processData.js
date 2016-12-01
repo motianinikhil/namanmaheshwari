@@ -1,24 +1,25 @@
-
 function portfolio (obj, container) {
   var head = '<div id="horizontalTab" style="display: block; width: 100%; margin: 0px;"><ul class="resp-tabs-list wow fadeInUp animated" data-wow-delay=".7s">';
   var body = '<div class="resp-tabs-container">';
 
-  function readPubs (currentTab, isProject) {
+  function readPubs (currentTab, tab) {
+    var isProject = (tab === "PROJECTS");
     var content = '<ol class = "tab_img ">';
     var firstDone = false;
     for (var e = 0; e < currentTab.length; e++) {
       var str = '<li><blockquote ';
       var element = currentTab[e];
+      str += ' data-toggle="collapse" data-target="#' + tab + e + '" >';
       if (isProject) {
-        str += ' data-toggle="collapse" data-target="#project' + e + '" >';
         str += element.title + '<div class="pull-right-lg">' + element.duration;
         if (element.report) {
-          str += ' <br /><div class="pull-right-lg"><a class="view-pdf" href="' + element.report + '" data-title="' + element.title +
+          str += ' <br /><div class="pull-right-lg"><a class="view-pdf" href="' + element.report + '" data-title="' +
+                 element.title +
                  ' - Report">Project Report</a></div>';
         }
         str += '</div>';
         element.footer = element.footer || "";
-        str += '<footer>' + element.footer + '<div id="project' + e + '" class="collapse in';
+        str += '<footer>' + element.footer + '<div id="' + tab + e + '" class="collapse in';
         if (!firstDone) {
           firstDone = true;
         }
@@ -27,7 +28,7 @@ function portfolio (obj, container) {
                '</div>' + '</footer>';
         str += "</a></blockquote>";
       } else {
-        str += '>' + element.author + ', <em><a ';
+        str += element.author + ', <em><a ';
         if (element.pdfSource) {
           str += 'class="view-pdf" data-title="' + element.title + '" href="' + element.pdfSource + '" ';
         } else {
@@ -38,7 +39,16 @@ function portfolio (obj, container) {
         }
         str += ' >' + element.title + '</a></em>';
         if (element.footer) {
-          str += '<footer>' + element.footer + '</footer>';
+          str += '<footer>' + element.footer;
+        }
+        if (element.messageList) {
+          str +=
+            '<div id="' + tab + e + '" class="collapse in"><ul><li  type="square">' + element.messageList.join('</li><li type="square">') +
+            '</li></ul>' +
+            '</div>'
+        }
+        if (element.footer) {
+          str += "</footer>";
         }
         str += "</blockquote>";
       }
@@ -53,7 +63,7 @@ function portfolio (obj, container) {
     if (obj.hasOwnProperty(tab)) {
       head += '<li class="resp-tab-item"><span>' + tab + '</span></li>';
       body += '<div class="tab-1 resp-tab-content"><div class="tab_img">';
-      body += readPubs(obj[tab], tab !== "PUBLICATIONS");
+      body += readPubs(obj[tab], tab);
       body += '</div></div>';
     }
   }
