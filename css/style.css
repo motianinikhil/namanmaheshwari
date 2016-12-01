@@ -1409,3 +1409,42 @@ ul.arrow {
     float: right;
   }
 }
+
+#thanks::before{
+  box-sizing: border-box;
+}
+#thanks::after{
+  box-sizing: border-box;
+}
+#thanks {
+  color: #ffffff;
+  vertical-align: baseline;
+  user-select: none;
+  background: rgba(46, 49, 65, 0.8);
+  cursor: default;
+  text-align: center;
+  top: 0;
+  width: 100%;
+  visibility: visible;
+}
+
+#inner {
+  transform: translateY(0);
+  color: #fff;
+  user-select: none;
+  cursor: default;
+  height: 100%;
+  left: 0;
+  text-align: center;
+  top: 0;
+  background: #008B8B;
+  border-radius: 5px;
+  display: block;
+  max-width: 100%;
+  position: relative;
+
+}
+
+#thanksModal {
+  padding-top: 15%;
+}

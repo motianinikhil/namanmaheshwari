@@ -149,29 +149,14 @@ $(document).ready(function () {
     e.preventDefault();
     $.ajax({
       type: 'POST',
-      url: "http://formspree.io/naman.mah1993@gmail.com",
+      url: "//www.enformed.io/pzlvtzn4",
       data: $('#contactForm').serialize(),
       success: function () {
-        var successMsg = '<div id="alert-msg"  class="alert alert-success alert-dismissible fade in">' +
-                         '<button type="button" class="close" data-dismiss="alert">&times;</button>' +
-                         'Message Sent Successfully' +
-                         '</div>';
-        $("#alert-msg").fadeTo(2000, 500).slideUp(500, function () {
-          $("#alert-msg").slideUp(500);
-        });
-
-        $('#alert').append(successMsg);
+        $('#myModal').modal();
       },
       error: function () {
-        var failMsg = '<div id="alert-msg" class="alert alert-error alert-dismissible fade in">' +
-                      '<a href="#" class="close" data-dismiss="alert">&times;</a>' +
-                      '<strong> Error </strong>There was an error sending message. Please contact directly' +
-                      '</div>';
-        $('#alert').append(failMsg);
+        $('#myModal').modal();
       }
     })
   })
-});
-$(".alert-dismissable").fadeTo(2000, 500).slideUp(500, function () {
-  $(".alert-dismissable").alert('close');
 });
