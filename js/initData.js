@@ -1,16 +1,34 @@
 var DATA = {
   "WORK": [
-    {
-      "duration": "Jul 2015 - Present",
+   {
+      "duration": "Aug 2017 - Present",
+      "shortTitle": "Graduate Teaching Assistant, The University of Texas at Austin",
+      "shortDesc": [
+        "I am currently working as a Graduate Teaching Assistant for the Digital Logic Design course at the University of Texas at Austin."
+      ],
+      "additionalInfo": {
+        "dataRef": "UTFull",
+        "linkText": "Read More ...",
+        "data": {
+          "title": "University of Texas, Austin (Aug 2017 - Present)",
+          "messageHead": "<strong>Graduate Teaching Assistant</strong>",
+          "messageList": [
+            "Working as a T.A. for the course EE 316 (Digital Logic Design) and doing the development of the labs based on designing in Verilog and simulation on Basys FPGA board"
+          ]
+        }
+      }
+    },
+	{
+      "duration": "Jul 2015 - Jul 2017",
       "shortTitle": "Digital Design Engineer, Texas Instruments, India",
       "shortDesc": [
-        "I am currently working as a Digital Design Engineer in the Automotive Radar Design-for-Testability team at Texas Instruments, Bangalore, India."
+        "I worked for two years as a Digital Design Engineer in the Automotive Radar Design-for-Testability team at Texas Instruments, Bangalore, India."
       ],
       "additionalInfo": {
         "dataRef": "texasFull",
         "linkText": "Read More ...",
         "data": {
-          "title": "Texas Instruments, India (Jul 2015 - Present)",
+          "title": "Texas Instruments, India (Jul 2015 - Jul 2017)",
           "messageHead": "<strong>Digital Design Engineer, Design-for-Testability Team, Automotive-Radar chip</strong>",
           "messageList": [
             "Implemented the Built-In Self-Test (BIST) mechanism for memories for a complex design with 250+ memories <ul class='lowspace'><li>Implemented the architecture for memory testing during production as well as field testing</li><li>Verification of multiple fault-detection algorithms on all the memories in the design across multiple process corners, with high-security considerations and test-time optimization techniques like concurrent testing of memories</li></ul>",
@@ -80,6 +98,13 @@ var DATA = {
     }
   ],
   "EDUCATION": [
+    {
+      "duration": "Master of Science, Class of 2019",
+      "shortTitle": "Electrical and Computer Engineering, UT Austin",
+      "shortDesc": [
+        "<strong> CGPA: Not Available</strong><p>The University of Texas at Austin <ul><li  type='square'><strong>Relevant Coursework: </strong>VLSI-1, Dependable Computing</li></ul></p>"
+      ]
+    },
     {
       "duration": "B.E. (Hons.), 2011-2015",
       "shortTitle": "Electrical & Electronics Engg, BITS-Pilani, India",
@@ -162,6 +187,12 @@ var DATA = {
                   "<br /><span class='fa fa-trophy'></span>  Awarded the <strong>Student Fellowship</strong> by the VLSID-2015 Conference Committee, for excellent record in academics & past work"
       },
       {
+        "title": "Frequency Scaled Segmented (FSS) Scan Architecture for Optimized Scan-Shift Power and Faster Test Application Time",
+        "author": "Wilson Pradeep, Prakash Narayanan, Rajesh Mittal, <strong>Naman Maheshwari</strong> and Nikita Naresh",
+        "footer": " Accepted in 48th IEEE International Test Conference, 2017 (<strong>ITC-2017</strong>)",
+        "tip": "In Press"
+      },
+      {
         "title": "Enhanced MISR Debug and Diagnosis with Per Cycle Scan Data Observation Capability",
         "author": "<strong>Naman Maheshwari</strong>, Wilson Pradeep, Prakash Narayanan and Rajesh Mittal",
         "footer": "Proceedings of 19th Texas Instruments India Technical Conference, 2016 (<strong>TIITC-2016</strong>) [Acceptance Rate: 24%]",
@@ -176,10 +207,20 @@ var DATA = {
                   "<br /><span class='fa fa-trophy'></span>  Nominated for the <strong>Best Paper Award</strong> in the conference proceedings"
       },
       {
-        "title": "Novel Debug and Diagnosis Method for MISR based Scan Compression Architecture",
-        "author": "<strong>Naman Maheshwari</strong>, Wilson Pradeep and Prakash Narayanan",
-        "footer": "<em>Submitted </em> to 35th IEEE VLSI Test Symposium, 2017 (VTS-2017)",
-        "tip": "Paper in review."
+        "title": "A Comparative Evaluation of Approximate Multipliers",
+        "pdfSource": "./docs/MultiplierComparison_NANOARCH16.pdf",
+        "author": "Honglan Jiang, Cong Liu, <strong>Naman Maheshwari</strong>, Fabrizio Lombardi and Jie Han",
+        "popup": "",
+        "footer": "Proceedings of 12th ACM/IEEE International Symposium on Nanoscale Architectures, 2016 (<strong>NANOARCH-2016</strong>)" +
+                  "<br /><span class='fa fa-trophy'></span>  Nominated for the <strong>Best Paper Award</strong> in the conference proceedings"
+      },
+      {
+        "title": "Low Cost High-Performance Built-In Self-Test Solution using Cadence LBIST for Safety Critical SoCs",
+		"pdfSource": "./docs/LBIST_CDNLive2017.pdf",
+        "author": "Wilson Pradeep, Aravinda Acharya and <strong>Naman Maheshwari</strong>",
+        "popup": "",
+        "footer": " Proceedings of Cadence User Conference, 2017 (<strong>CDNLIVE-2017</strong>)" +
+                  "<br /><span class='fa fa-trophy'></span>  Won the <strong>Best Paper Award</strong> in the conference proceedings"
       },
       {
         "title": "A Comparison of Approximate Multipliers for Error Resilient Applications",

@@ -1,7 +1,7 @@
 $(function () {
 
   function initializeMap () {
-    var myLocation = new google.maps.LatLng(12.9895798, 77.67079439999998);
+    var myLocation = new google.maps.LatLng(30.304685, -97.724931);
 
     var mapOptions = {
       zoom: 12,
@@ -14,9 +14,9 @@ $(function () {
     var marker = new google.maps.Marker({map: map, position: myLocation});
 
     var address = "<strong>Naman Maheshwari</strong>" +
-                  "<br>A-208, Krishnageet Shelters " +
-                  "<br>16-E Cross, Pai Layout, " +
-                  "<br>Bengaluru, Karnataka - 560016 <br>";
+                  "<br>4305, Duval St, Apt 116 " +
+                  "<br>Duval Villa Apartments" +
+                  "<br>Austin, TX 78751 <br>";
 
     var infowindow = new google.maps.InfoWindow({content: address, maxWidth: 400});
 
