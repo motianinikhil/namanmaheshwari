@@ -109,7 +109,7 @@ var DATA = {
       "duration": "B.E. (Hons.), 2011-2015",
       "shortTitle": "Electrical & Electronics Engg, BITS-Pilani, India",
       "shortDesc": [
-        "<strong> CGPA: 9.31/10.0</strong><p>Birla Institute of Technology and Science (BITS)-Pilani, Pilani Campus, India <ul><li  type='square'>Among the top 10 students in Electrical, Electronics & Instrumentation Departments in a batch of 150 students </li><li type='square'> Overall amongst top 5% students in BITS-Pilani</li></ul></p>"
+        "<strong> CGPA: 9.31/10.0</strong><p>Birla Institute of Technology and Science (BITS)-Pilani, Pilani Campus, India <ul><li  type='square'>Among the top 10 students in Electrical, Electronics & Instrumentation Departments in a batch of 150 students </li></p>"
       ]
     }
   ],
