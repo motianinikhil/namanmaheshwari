@@ -211,7 +211,7 @@ var DATA = {
 		"pdfSource": "./docs/LBIST_CDNLive2017.pdf",
         "author": "Wilson Pradeep, Aravinda Acharya and <strong>Naman Maheshwari</strong>",
         "popup": "",
-        "footer": " Proceedings of Cadence User Conference, 2017 (<strong>CDNLIVE-2017</strong>)" +
+        "footer": " Proceedings of Cadence User Conference, India, 2017 (<strong>CDNLIVE INDIA-2017</strong>)" +
                   "<br /><span class='fa fa-trophy'></span>  Won the <strong>Best Paper Award</strong> in the conference proceedings"
       },
       {
