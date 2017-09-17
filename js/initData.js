@@ -11,7 +11,7 @@ var DATA = {
         "linkText": "Read More ...",
         "data": {
           "title": "The University of Texas at Austin (Aug 2017 - Present)",
-          "messageHead": "<strong>Graduate Teaching Assistant</strong>",
+          "messageHead": "<strong>Graduate Teaching Assistant, Department of Electrical and Computer Engineering</strong>",
           "messageList": [
             "Working as a T.A. for the course EE 316 (Digital Logic Design) and doing the development of the labs based on designing in Verilog and simulation on Basys FPGA board"
           ]
