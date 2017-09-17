@@ -207,14 +207,6 @@ var DATA = {
                   "<br /><span class='fa fa-trophy'></span>  Nominated for the <strong>Best Paper Award</strong> in the conference proceedings"
       },
       {
-        "title": "A Comparative Evaluation of Approximate Multipliers",
-        "pdfSource": "./docs/MultiplierComparison_NANOARCH16.pdf",
-        "author": "Honglan Jiang, Cong Liu, <strong>Naman Maheshwari</strong>, Fabrizio Lombardi and Jie Han",
-        "popup": "",
-        "footer": "Proceedings of 12th ACM/IEEE International Symposium on Nanoscale Architectures, 2016 (<strong>NANOARCH-2016</strong>)" +
-                  "<br /><span class='fa fa-trophy'></span>  Nominated for the <strong>Best Paper Award</strong> in the conference proceedings"
-      },
-      {
         "title": "Low Cost High-Performance Built-In Self-Test Solution using Cadence LBIST for Safety Critical SoCs",
 		"pdfSource": "./docs/LBIST_CDNLive2017.pdf",
         "author": "Wilson Pradeep, Aravinda Acharya and <strong>Naman Maheshwari</strong>",
