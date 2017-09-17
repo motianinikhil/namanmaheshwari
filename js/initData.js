@@ -2,7 +2,7 @@ var DATA = {
   "WORK": [
    {
       "duration": "Aug 2017 - Present",
-      "shortTitle": "Graduate Teaching Assistant, The University of Texas at Austin",
+      "shortTitle": "Graduate Teaching Assistant, University of Texas, Austin",
       "shortDesc": [
         "I am currently working as a Graduate Teaching Assistant for the Digital Logic Design course at the University of Texas at Austin."
       ],
