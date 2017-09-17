@@ -10,7 +10,7 @@ var DATA = {
         "dataRef": "UTFull",
         "linkText": "Read More ...",
         "data": {
-          "title": "University of Texas, Austin (Aug 2017 - Present)",
+          "title": "The University of Texas at Austin (Aug 2017 - Present)",
           "messageHead": "<strong>Graduate Teaching Assistant</strong>",
           "messageList": [
             "Working as a T.A. for the course EE 316 (Digital Logic Design) and doing the development of the labs based on designing in Verilog and simulation on Basys FPGA board"
